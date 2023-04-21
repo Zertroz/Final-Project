@@ -4,7 +4,8 @@ import Homepage from './components/HomePage/Homepage';
 import StatPage from './components/StatPage/StatPage';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import stat from './testdata';
+import {stat, skill} from './testdata';
+import SkillPage from './components/SkillPage/SkillPage';
 
 function App() {
   const testData = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']
@@ -32,6 +33,7 @@ function App() {
       <h1>Saviors and Starters</h1>
       <Switch>
         <Route path='/ability_scores/:stat'>{<StatPage stat={stat}/>}</Route>
+        <Route path='/skills/:skill'>{<SkillPage skill={skill}/>}</Route>
         <Route path='/'>{<Homepage data={testData} search={handleSearch} />}</Route>
       </Switch>
     </main>

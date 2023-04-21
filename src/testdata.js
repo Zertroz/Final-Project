@@ -31,4 +31,18 @@ const stat = {
   "url": "/api/ability-scores/cha"
 }
 
-export default stat;
+
+const skill = {
+  "index": "nature",
+  "name": "Nature",
+  "desc": [
+    "Your Intelligence (Nature) check measures your ability to recall lore about terrain, plants and animals, the weather, and natural cycles."
+  ],
+  "ability_score": {
+    "index": "int",
+    "name": "INT",
+    "url": "/api/ability-scores/int"
+  },
+  "url": "/api/skills/nature"
+}
+export { stat, skill };
