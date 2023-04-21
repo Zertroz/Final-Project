@@ -5,7 +5,7 @@ import Form from '../Form/Form';
 function Homepage({data, search}) {
   const stats = data.map(stat => {
     return (
-      <Link to={`/abillity_scores/${stat.toLowerCase()}`} key={stat}>
+      <Link to={`/ability_scores/${stat.toLowerCase()}`} key={stat}>
         <div className='stat'>
           <div className='stat-square'></div>
           <p>{stat}</p>
