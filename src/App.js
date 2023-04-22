@@ -4,7 +4,7 @@ import Homepage from './components/HomePage/Homepage';
 import StatPage from './components/StatPage/StatPage';
 import { useState } from 'react';
 import { useEffect } from 'react';
-// import {stat, skill} from './testdata';
+import stats from './queryData';
 import SkillPage from './components/SkillPage/SkillPage';
 import fetchData from './apiCalls';
 
@@ -13,6 +13,7 @@ function App() {
   const [skill, setSkill] = useState({})
   const [error, setError] = useState('')
   const history = useHistory()
+  const statList = stats.flatMap(stat => stat.name)
   let type;
   let name;
   
@@ -20,12 +21,11 @@ function App() {
     event.preventDefault()
     setSkill('')
     setStat('')
-    name = value
-    if(testData.includes(value.toLowerCase())) {
+    if(statList.includes(value.toLowerCase())) {
+      name = stats.find(stat => stat.name.includes(value)).index
       type = 'ability-scores' 
     } else {
       type = 'skills'
-      console.log(skill)
     }
     getData()
     history.push(`/${type}/${value.toLowerCase()}`)
@@ -42,9 +42,9 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   getData()
+  // }, [])
 
   return (
     <main className='App'>
@@ -52,7 +52,7 @@ function App() {
       <Switch>
         <Route path='/ability-scores/:stat'>{<StatPage stat={stat} />}</Route>
         <Route path='/skills/:skill'>{<SkillPage skill={skill}/>}</Route>
-        <Route path='/'>{<Homepage data={testData} search={handleSearch} />}</Route>
+        <Route path='/'>{<Homepage data={stats.map(stat => stat.name[0])} search={handleSearch} />}</Route>
       </Switch>
     </main>
   );

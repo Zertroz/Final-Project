@@ -1,8 +1,10 @@
 const stats = [
-  {name: ['strength', 'str'],  index: 'str'},
-  {name: ['dexterity', 'dex'], index: 'dex'},
-  {name: ['constitution', 'con'], index: 'con'},
-  {name: ['intelligence', 'int'], index: 'int'},
-  {name: ['wisdom', 'wis'], index: 'wis'},
-  {name: ['charisma', 'cha'], index: 'cha'}
+  {name: ['Strength', 'strength', 'str'],  index: 'str'},
+  {name: ['Dexterity', 'dexterity', 'dex'], index: 'dex'},
+  {name: ['Constitution', 'constitution', 'con'], index: 'con'},
+  {name: ['Intelligence', 'intelligence', 'int'], index: 'int'},
+  {name: ['Wisdom', 'wisdom', 'wis'], index: 'wis'},
+  {name: ['Charisma', 'charisma', 'cha'], index: 'cha'}
 ]
+
+export default stats;
