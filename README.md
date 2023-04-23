@@ -28,7 +28,7 @@ Run 'npm run cypress' from the terminal while within the main directory of the a
 
 ## Preview of App:
 [//]: <>
-![Preview of App](https://user-images.githubusercontent.com/116397118/233872550-6c186dd1-60d8-4807-bdd1-5a65624bb115.gif)
+![Preview of App](https://user-images.githubusercontent.com/116397118/233873167-1a0cfd7a-bd50-4af9-b7c5-14c33d255880.gif)
 ## Live demo:
 
 
