@@ -7,7 +7,6 @@ function Homepage({data}) {
       <Link to={`/ability-scores/${stat.index.toLowerCase()}`} key={stat.index}>
         <div className='stat'>
           <div className='stat-square'><p>{stat.index.toUpperCase()}</p></div>
-          {/* <p>{stat.name[0]}</p> */}
         </div>
       </Link>
     )
