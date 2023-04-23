@@ -1,14 +1,13 @@
 import './Homepage.css';
 import { Link } from 'react-router-dom';
-import Form from '../Form/Form';
 
-function Homepage({data, search}) {
+function Homepage({data}) {
   const stats = data.map(stat => {
     return (
-      <Link to={`/ability-scores/${stat.toLowerCase()}`} key={stat}>
+      <Link to={`/ability-scores/${stat.index.toLowerCase()}`} key={stat.index}>
         <div className='stat'>
-          <div className='stat-square'></div>
-          <p>{stat}</p>
+          <div className='stat-square'><p>{stat.index.toUpperCase()}</p></div>
+          <p>{stat.name[0]}</p>
         </div>
       </Link>
     )
@@ -17,11 +16,16 @@ function Homepage({data, search}) {
   return (
     <div className='homepage'>
       <section className='stat-list'>
-        {stats}
+        <h4>Ability Scores</h4>
+        <div>
+          {stats}
+        </div>
       </section>
       <div className='homepage-right'>
         <section>
-          <p>Basic intro goes here</p>
+          <h2>Welcome to Starters and Saviors!</h2>
+          <p>This site is designed to be an introductory tutorial for new and returning players of Dungeons and Dragons 5E. However, veteran players can also use it to find quick rules reference!</p>
+          <p>We currently have pages for all ability scores and skills.</p>
         </section>
       </div>
     </div>

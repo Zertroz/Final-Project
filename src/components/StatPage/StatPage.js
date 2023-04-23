@@ -8,7 +8,7 @@ function StatPage({value, stat, loadPage}) {
   let body
   
   if (skills && skills.length >= 1) {
-    body = desc.map((desc, index) => <p key={index}>{desc}</p>)
+    body = desc.map((desc, index) => <p className={'body'} key={index}>{desc}</p>)
     skillList = skills.map(skill => <Link key={skill.index} to={`/skills/${skill.index}`}><li>{skill.name}</li></Link>)
   } else if (skills) {
     body = desc.map((desc, index) => <p key={index}>{desc}</p>)
@@ -24,8 +24,10 @@ function StatPage({value, stat, loadPage}) {
       <h2>{full_name}</h2>
       <h6>(Abbreviated as {name})</h6>
       {body}
-      <p>{full_name} governs these skills:</p>
-      {skillList}
+      <div className='skill-list'>
+        <p>{full_name} governs these skills:</p>
+        {skillList}
+      </div>
     </section>
   )
 }

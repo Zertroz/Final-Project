@@ -83,7 +83,7 @@ function App() {
         <Route exact path='/skills/:skill' render={(({match}) => {
           return <SkillPage skill={skill} value={match.params.skill} loadPage={loadPage} />
         })}/>
-        <Route path='/'>{<Homepage data={stats.map(stat => stat.name[0])} loadPage={loadPage} />}</Route>
+        <Route path='/'>{<Homepage data={stats} loadPage={loadPage} />}</Route>
       </Switch>
     </main>
   );

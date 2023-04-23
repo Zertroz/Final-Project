@@ -17,10 +17,12 @@ function SkillPage({skill, value, loadPage}) {
 
   return (
     <section className='skill-page'>
-      <h1>{name}</h1>
+      <h2 className='title'>{name}</h2>
       <p>{desc}</p>
-      <p>Governing ability score:</p>
-      {governingStat}
+      <div className='stat'>
+        <p>Governing ability score:</p>
+        {governingStat}
+      </div>
     </section>
   );
 };
