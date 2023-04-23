@@ -4,8 +4,9 @@ import Homepage from './components/HomePage/Homepage';
 import StatPage from './components/StatPage/StatPage';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import stats from './queryData';
+import { stats, skills } from './queryData';
 import SkillPage from './components/SkillPage/SkillPage';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import fetchData from './apiCalls';
 import Form from './components/Form/Form';
 
@@ -21,21 +22,30 @@ function App() {
   const handleSearch = (event, value) => {
     event.preventDefault();
     loadPage(value)
-    history.push(`/${type}/${name}`);
+    if (!type || !name) {
+      history.push(`/error`)
+    } else {
+      history.push(`/${type}/${name}`);
+    }
   }
   
   const loadPage = (value) => {
     if (!value) {
       return
     }
+    type=''
+    name=''
     setSkill('');
     setStat('');
+    setError('');
     if(statList.includes(value.toLowerCase())) {
       name = stats.find(stat => stat.name.includes(value)).index;
       type = 'ability-scores';
-    } else {
-      name = value.split(' ').join('-');
+    } else if (skills.includes(value.toLowerCase().split(' ').join('-'))) {
+      name = value.toLowerCase().split(' ').join('-');
       type = 'skills';
+    } else {
+      type = 'error';
     }
     getData();
   }
@@ -46,8 +56,10 @@ function App() {
       setStat(data);
     } else if (type === 'skills') {
       setSkill(data);
-    } else {
-      console.log(error);
+    } else if (error) {
+      setError(error)
+    } else if (data instanceof Error) {
+      setError(data.toString())
     }
   }
 
@@ -59,11 +71,12 @@ function App() {
     <main className='App'>
       <header>
         <Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>
-          <h1>Saviors and Starters</h1>
+          <h1>Starters and Saviors</h1>
         </Link>
         <Form handleSearch={handleSearch} />
       </header>
       <Switch>
+        <Route path='/error'><ErrorPage error={error}/></Route>
         <Route exact path='/ability-scores/:stat' render={(({match}) => {
           return <StatPage stat={stat} value={match.params.stat} loadPage={loadPage} />
         })}/>
