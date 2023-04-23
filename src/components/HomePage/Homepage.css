@@ -1,16 +1,32 @@
 .homepage {
   display: flex;
-  height: 100%;
+  height: 75%;
+  width: 100%;
+  justify-content: space-around;
 }
 
-.stat-list > div {
+.homepage-right {
+  width: 75%;
+}
+
+.stat-list {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
   margin-left: 3em;
   padding-right: 3em;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-square > p {
+  margin: 0;
 }
 
 .stat-square {
@@ -18,30 +34,44 @@
   height: 5em;
   width: 5em;
   border-radius: 1em;
-  margin-bottom: 5%;
+  margin-bottom: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-h2, h4 {
+.stat > p {
+  margin: 0;
+}
+
+h4 {
   text-align: center;
   margin-bottom: 5%;
 }
 
 h2 {
+  margin-bottom: .5em;
   background-color: bisque;
-  padding: .5em
+  padding: .5em;
+  width: inherit;
+  text-align: center;
 }
 
 @media screen and (max-width: 40em) {
   .homepage {
     flex-direction: column-reverse;
   }
+  .homepage-right {
+    width: inherit;
+  }
   
-  .stat-list > div {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .stat-list-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-square {
+    margin: .5em;
   }
 }

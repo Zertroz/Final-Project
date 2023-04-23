@@ -1,15 +1,16 @@
-h2, h6 {
+.stat-title, h6 {
+  width: inherit;
   text-align: center;
   background-color: bisque;
   padding: .5em;
 }
 
-h2 {
+.stat-title {
   margin: 0;
 }
 
 h6 {
-  margin-bottom: 5%;
+  margin-bottom: 2em;
 }
 
 .skill-list {
