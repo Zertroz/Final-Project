@@ -7,8 +7,8 @@ function SkillPage({skill, value, loadPage}) {
   const {index, name, desc, ability_score, url} = skill;
   let governingStat;
   if(name) {
-    const findStat = stats.find(stat => stat.name.includes(ability_score.index)).name[0];
-    governingStat = <Link to={`/ability-scores/${findStat}`}><p>{findStat}</p></Link>
+    const findStat = stats.find(stat => stat.name.includes(ability_score.index));
+    governingStat = <Link to={`/ability-scores/${findStat.index}`}><p>{findStat.name[0]}</p></Link>
   }
 
   useEffect(() => {
