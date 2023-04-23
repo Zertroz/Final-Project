@@ -21,7 +21,7 @@ function StatPage({value, stat, loadPage}) {
 
   return (
     <section className='stat-page'>
-      <h2>{full_name}</h2>
+      <h2 className='stat-title'>{full_name}</h2>
       <h6>(Abbreviated as {name})</h6>
       {body}
       <div className='skill-list'>
