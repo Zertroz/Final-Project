@@ -1,5 +1,5 @@
 import './App.css';
-import { Switch, Route, useHistory, Link, NavLink } from 'react-router-dom';
+import { Switch, Route, useHistory, Link } from 'react-router-dom';
 import Homepage from './components/HomePage/Homepage';
 import StatPage from './components/StatPage/StatPage';
 import { useState } from 'react';

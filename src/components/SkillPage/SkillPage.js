@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function SkillPage({skill, value, loadPage}) {
-  const {index, name, desc, ability_score, url} = skill;
+  const {name, desc, ability_score} = skill;
   let governingStat;
   if(name) {
     const findStat = stats.find(stat => stat.name.includes(ability_score.index));

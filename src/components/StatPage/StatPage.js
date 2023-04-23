@@ -3,7 +3,7 @@ import './StatPage.css';
 import { useEffect } from 'react';
 
 function StatPage({value, stat, loadPage}) {
-  const {desc, full_name, index, name, skills, url} = stat
+  const {desc, full_name, name, skills} = stat
   let skillList
   let body
   
