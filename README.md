@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# [Starters and Saviors](https://starters-and-saviors.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
 
-## Available Scripts
+Dungeons and Dragons can be hard for new players to learn. This app is an attempt to make the relevant information easily available to a general public, in the form of a readable wiki-style webpage. As an MVP, this app only has the rules for skills and ability scores, but a user can view and access any of the rules pertaining to those features. It is built using React, and uses the [DnD5eAPI](https://www.dnd5eapi.co/docs/#overview).
+  
+[//]: <>
 
-In the project directory, you can run:
+## Installation Instructions:
+[//]: <>
 
-### `npm start`
+1. Clone down this repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Install dependencies by using ‘npm install’ in your terminal within the root directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. To host website on your local machine, run ’npm start’ in terminal.
 
-### `npm test`
+1. A window should be opened in your default browser, if not, navigate to http://localhost:3000 in your preferred browser to view the hosted application!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Alternatively, the app is deployed via 
 
-### `npm run build`
+## Testing Instructions:
+[//]: <>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the test suite associated with the functions behind the scenes and how they interact: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run 'npm run cypress' from the terminal while within the main directory of the application and select E2E Testing, and your chosen browser in the following window.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Preview of App:
+[//]: <>
+![Preview of App](https://user-images.githubusercontent.com/116397118/233872550-6c186dd1-60d8-4807-bdd1-5a65624bb115.gif)
+## Live demo:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Application is deployed live at: [Vercel](https://starters-and-saviors.vercel.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Context:
+[//]: <>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project was assigned as the capstone for Mod 3 at Turing, and was a solo project built in 4 days. 
 
-## Learn More
+## Contributors:
+[//]: <>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Kass Daniello](https://github.com/Zertroz) 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Learning Goals:
+[//]: <>
 
-### Code Splitting
+- Further practice React skillset
+- Create a multi-page UX using Router
+- Provide full E2E testing coverage via Cypress
+- Deploy final result
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Future Feature Ideas:
+[//]: <>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Further pages for additional rules, eventually the entire 5e ruleset that is available under the public SRD.
+- Refactoring using Redux.
