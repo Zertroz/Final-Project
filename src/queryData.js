@@ -7,4 +7,6 @@ const stats = [
   {name: ['Charisma', 'charisma', 'cha'], index: 'cha'}
 ]
 
-export default stats;
+const skills = ['acrobatics', 'animal-handling', 'arcana', 'athletics', 'deception', 'history', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'persuasion', 'religion', 'sleight-of-hand', 'stealth', 'survival']
+
+export { stats, skills };

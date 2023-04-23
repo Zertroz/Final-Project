@@ -1,5 +1,5 @@
 import './SkillPage.css';
-import stats from '../../queryData';
+import { stats } from '../../queryData';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
